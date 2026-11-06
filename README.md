@@ -10,7 +10,7 @@ The portfolio asks how computational tools can work with language and literature
 |-----|---------|--------------|------------|-----------------|
 | 01 | Indic Language Stop Words for Natural Language Processing | Compiles 100 stop words each for Hindi and Bhojpuri in Roman letters, stores them as Python lists, and compares the postpositions, pronouns and auxiliary verbs of the two languages. | [hindi-bhojpuri-stopwords](https://github.com/adityakumar190/hindi-bhojpuri-stopwords) | [Open](https://adityakumar190.github.io/hindi-bhojpuri-stopwords/) |
 | 02 | Extraction of Indian Cultural Elements Using RAG: Flora and Fauna | Uses retrieval-augmented generation to extract flora and fauna from six Indian literary texts on Project Gutenberg (117 entries), then examines the lists for errors and omissions. | [RAG-literary-text](https://github.com/adityakumar190/RAG-literary-text) | [Open](https://adityakumar190.github.io/RAG-literary-text/) |
-| 03 | Synthetic Reading of O. Henry's "The Gift of the Magi" | Combines a partial human reading with language-model extraction of 152 phrases, counts 193 occurrences across 13 segments and four stages, and tests the patterns with chi-square and Spearman tests. | [synthetic_reading_gift_of_the_magi](https://github.com/adityakumar190/synthetic_reading_gift_of_the_magi) | [Open](https://adityakumar190.github.io/synthetic_reading_gift_of_the_magi/) |
+| 03 | Synthetic Reading of O. Henry's "The Gift of the Magi" | A synthetic reading that combines a partial human reading with language-model extraction of 152 phrases, then counts 193 occurrences across 13 segments and four stages, and tests the patterns with chi-square and Spearman tests. | [synthetic_reading_gift_of_the_magi](https://github.com/adityakumar190/synthetic_reading_gift_of_the_magi) | [Open](https://adityakumar190.github.io/synthetic_reading_gift_of_the_magi/) |
 | 04 | CiteCheck: APA 7 & MLA 9 Academic Citation Auditor | A skill, written as one Markdown file, that guides a language-model assistant in auditing citations in APA 7 or MLA 9 without inventing details or overstating what was checked. | [citationcheckerskill](https://github.com/adityakumar190/citationcheckerskill) | [Open](https://adityakumar190.github.io/citationcheckerskill/) |
 
 Each assignment on the portfolio page has its own abstract, a link to its GitHub repository, a link to its full project webpage, and a screenshot of that page.
@@ -55,10 +55,6 @@ No software or build step is needed.
 - **An assignment:** change the title, abstract and links inside its `<article class="assignment">` block. Keep each abstract in step with the abstract on the project's own webpage.
 
 The styling and fonts come from the course template and are not changed in this portfolio. The page follows the user's light or dark setting and works on narrow screens.
-
-## Use of language models
-
-Where a language model was used, its output was treated as a draft to be checked. In Assignment 02 the extracted lists were read against the books. In Assignment 03 a language model (Claude, Anthropic) extracted phrases on 31 October 2026, and every phrase was verified word for word against the story before counting. Assignment 04 describes the design of a skill and does not report a test of its accuracy.
 
 ## Sources
 
