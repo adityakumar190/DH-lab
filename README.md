@@ -1,52 +1,77 @@
-# Student Digital Humanities Exhibition Template
+# Aditya Kumar's Digital Humanities Portfolio
 
-This template is a single, self-contained webpage for a student's **multiple Digital Humanities assignments**. You only need `index.html` to publish it on GitHub Pages—there are no installations, accounts beyond GitHub, or build tools required.
+A single-page exhibition of four Digital Humanities Lab projects, prepared for the MA in Digital Humanities (Session 2026–27), Department of Humanities and Social Sciences, IIT (ISM) Dhanbad.
 
-## Before publishing
+The portfolio asks how computational tools can work with language and literature without replacing the reader. In each project the method is paired with human judgement, and its limits are stated openly.
 
-1. Download or copy `index.html` into a new folder.
-2. Open it in a text editor (for example, VS Code, Notepad, or GitHub's online editor).
-3. Replace all text marked `[EDIT: ...]` with your own work.
-4. Keep the six Student details fields in the stated order. Change only the Name value; the other five values are already set for this assignment.
-5. Each `Assignment` block is a separate exhibit. Replace its title, abstract, and visible work. You can delete unused blocks, duplicate a block to add more, or rearrange them. The page automatically numbers the assignments and updates the “On this page” list when it opens.
-6. Replace the GitHub repository link in every Assignment block with the repository for that project. The visible button opens the repository in a new tab.
-7. Open `index.html` in a web browser to check your work.
+## The four projects
 
-## Publish with GitHub Pages
+| No. | Project | What it does | Repository | Project webpage |
+|-----|---------|--------------|------------|-----------------|
+| 01 | Indic Language Stop Words for Natural Language Processing | Compiles 100 stop words each for Hindi and Bhojpuri in Roman letters, stores them as Python lists, and compares the postpositions, pronouns and auxiliary verbs of the two languages. | [hindi-bhojpuri-stopwords](https://github.com/adityakumar190/hindi-bhojpuri-stopwords) | [Open](https://adityakumar190.github.io/hindi-bhojpuri-stopwords/) |
+| 02 | Extraction of Indian Cultural Elements Using RAG: Flora and Fauna | Uses retrieval-augmented generation to extract flora and fauna from six Indian literary texts on Project Gutenberg (117 entries), then examines the lists for errors and omissions. | [RAG-literary-text](https://github.com/adityakumar190/RAG-literary-text) | [Open](https://adityakumar190.github.io/RAG-literary-text/) |
+| 03 | Synthetic Reading of O. Henry's "The Gift of the Magi" | Combines a partial human reading with language-model extraction of 152 phrases, counts 193 occurrences across 13 segments and four stages, and tests the patterns with chi-square and Spearman tests. | [synthetic_reading_gift_of_the_magi](https://github.com/adityakumar190/synthetic_reading_gift_of_the_magi) | [Open](https://adityakumar190.github.io/synthetic_reading_gift_of_the_magi/) |
+| 04 | CiteCheck: APA 7 & MLA 9 Academic Citation Auditor | A skill, written as one Markdown file, that guides a language-model assistant in auditing citations in APA 7 or MLA 9 without inventing details or overstating what was checked. | [citationcheckerskill](https://github.com/adityakumar190/citationcheckerskill) | [Open](https://adityakumar190.github.io/citationcheckerskill/) |
 
-1. Sign in to [GitHub](https://github.com) and create a new **public** repository, for example `your-name-dh-project`.
-2. Upload `index.html` to the top level of that repository. Its name must be exactly `index.html`.
-3. In the repository, open **Settings** → **Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and the `/ (root)` folder, then click **Save**.
-6. After GitHub finishes deploying (usually a few minutes), return to **Settings** → **Pages**. Copy the displayed site address and submit that link.
+Each assignment on the portfolio page has its own abstract, a link to its GitHub repository, a link to its full project webpage, and a screenshot of that page.
 
-## Adding images or files
+## What is in this repository
 
-Create an `images` folder beside `index.html`, upload your image files there, and use paths like this in your page:
-
-```html
-<img src="images/my-image.jpg" alt="A concise description of the image">
+```
+.
+├── index.html                  The portfolio page (HTML, CSS and a small script in one file)
+├── assignment-1-screenshot.jpg Screenshot of the Assignment 01 webpage
+├── assignment-2-screenshot.jpg Screenshot of the Assignment 02 webpage
+├── assignment-3-screenshot.jpg Screenshot of the Assignment 03 webpage
+├── assignment-4-screenshot.jpg Screenshot of the Assignment 04 webpage
+└── README.md                   This file
 ```
 
-Always add useful `alt` text and credit images, archives, data, and tools in “Sources and acknowledgements.”
+The four screenshots must sit in the same folder as `index.html`, because the page refers to them by file name.
 
-## Responsive media
+## Page structure
 
-The template automatically resizes text, images, video, embeds, and the page layout for phones, tablets, desktop screens, high-zoom viewing, and print. For a wide video or interactive embed, wrap it in a `media-frame`:
+1. **Student details**: name, assignment, session, course, department and institution.
+2. **Portfolio introduction**: a short overview of the four projects, with links to each assignment.
+3. **01 Assignments**: the four exhibitions, each with a title, abstract, repository and webpage links, and a screenshot.
+4. **02 Portfolio reflection**: connections across the projects, with an optional methods note.
+5. **03 Sources and acknowledgements**: the texts, articles, style manuals and tools used across the portfolio.
 
-```html
-<div class="media-frame">
-  <iframe src="https://example.com" title="Describe the embedded work"></iframe>
-</div>
-```
+The assignment numbers and the "On this page" navigation are generated by a small script when the page opens, so the order of the assignment blocks in `index.html` decides the numbering.
 
-The page also follows a visitor’s light/dark-mode and reduced-motion preferences.
+## How to publish
 
-## Good publishing practice
+No software or build step is needed.
 
-- Use a clear project title and a brief abstract.
-- Make each assignment visible on the page rather than only linking to a file.
-- Check that every GitHub repository button leads to the correct assignment repository.
-- Check that all links work on the deployed GitHub Pages site.
-- Do not upload private information or material you do not have permission to share.
+1. Create a public repository on GitHub and upload `index.html`, the four screenshots and this `README.md`.
+2. Open the repository's **Settings**, then **Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**, select the `main` branch and the `/ (root)` folder, and save.
+4. After a minute or two, GitHub shows the address of the published site at the top of the Pages settings.
+
+## How to update
+
+- **Text:** edit `index.html` directly on GitHub (pencil icon) or locally, then commit. The site refreshes after a short delay.
+- **A screenshot:** replace the file with a new image of the same name, ideally about 1280 × 1100 pixels.
+- **An assignment:** change the title, abstract and links inside its `<article class="assignment">` block. Keep each abstract in step with the abstract on the project's own webpage.
+
+The styling and fonts come from the course template and are not changed in this portfolio. The page follows the user's light or dark setting and works on narrow screens.
+
+## Use of language models
+
+Where a language model was used, its output was treated as a draft to be checked. In Assignment 02 the extracted lists were read against the books. In Assignment 03 a language model (Claude, Anthropic) extracted phrases on 31 October 2026, and every phrase was verified word for word against the story before counting. Assignment 04 describes the design of a skill and does not report a test of its accuracy.
+
+## Sources
+
+The full list of texts, articles, manuals and tools is in the "Sources and acknowledgements" section of the portfolio page. Each project webpage also has its own references.
+
+## Author
+
+**Aditya Kumar**
+
+MA in Digital Humanities
+
+Session 2026–27
+
+Department of Humanities and Social Sciences
+
+Indian Institute of Technology (Indian School of Mines), Dhanbad
