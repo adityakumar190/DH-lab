@@ -299,7 +299,7 @@
         <section class="hero" aria-labelledby="portfolio-title">
           <p class="label project-kicker">Student portfolio</p>
           <h1 id="portfolio-title">Aditya Kumar&rsquo;s Digital Humanities Portfolio</h1>
-          <p class="abstract"><strong>Portfolio introduction</strong> <br>This portfolio explores the intersection of computational tools and cultural texts, focusing on how structured datasets reveal hidden patterns within language and literature. Through the series of exhibitions below, the projects investigate how cultural elements, linguistic barriers, and narrative themes can be systematically organized and re-examined. By applying automated categorization, linguistic filtering, and thematic mapping, each study provides a unique perspective on decoding text without losing its historical context. Readers can explore each exhibition below to observe how traditional reading practices adapt to structured analysis.</p>
+          <p class="abstract"><strong>Portfolio introduction</strong> <br>This portfolio brings together four projects that ask how computational tools can work with language and literature without replacing the reader. The first two compile and examine resources: stop-word lists for Hindi and Bhojpuri, and lists of Indian flora and fauna extracted from six literary texts with retrieval-augmented generation, which a close reading showed to need human review. The third combines a close reading of O. Henry’s “The Gift of the Magi” with a language model’s extraction of vocabulary, then counts and compares that vocabulary across the story. The fourth, CiteCheck, is a skill that guides a language-model assistant through auditing APA 7 and MLA 9 citations while stating only what it has checked. In each project the method is paired with human judgement and its limits are stated openly. Readers can open each exhibition below to see how the work was done.</p>
 
           <nav class="contents-nav" aria-label="Assignments on this page">
             <p class="label">On this page</p>
@@ -413,10 +413,12 @@
             <span class="section-number" aria-hidden="true">02</span>
             <h2 id="reflection-heading">Portfolio reflection</h2>
           </div>
-          <p>[EDIT: Reflect on the connections among your assignments. What did you learn about digital humanities methods, evidence, interpretation, or public presentation across the portfolio?]</p>
+          <p>Working through the four projects showed me that a computational result is only as useful as the checking around it. The stop-word lists were small and illustrative, yet comparing them showed real differences between Hindi and Bhojpuri in postpositions, pronouns and auxiliary verbs. The RAG extraction produced lists of flora and fauna quickly, but reading them against the books showed that 27 of the 117 entries (23%) were in the wrong list or were not plants or animals at all, and that many animals named in the poems were missing. In both projects the method gave a starting point and not a finished answer.
+
+<br>The last two projects moved from using a method to designing how it is used. In the synthetic reading of “The Gift of the Magi”, the four dimensions came from my own first reading, the language model supplied vocabulary that I verified word for word, and the counts were then read together with the passages. The counts supported some of my first impressions (shame and counting language is concentrated in the opening) and corrected others (the narrator’s comments appear at both ends of the story, not only at the end). CiteCheck applies the same caution to a different task, by telling an assistant what it may conclude and what it must not guess. Across all four, interpretation stayed with the reader, and the main lesson was to keep the evidence, the method and the limits visible together.</p>
           <details>
-            <summary>Optional: methods note</summary>
-            <p>[EDIT: Briefly document your workflow, tools, categories, decisions, or ethical considerations. Delete this box if it is not useful.]</p>
+            <summary>Methods Note</summary>
+            <p>The projects use Python files, a Markdown skill file and HTML pages, and each is published as a public GitHub repository with a GitHub Pages site. Where a language model was used, its output was treated as a draft to be checked. In Assignment 02 the extracted lists were read against the books, and in Assignment 03 a language model (Claude, Anthropic) extracted phrases on 31 October 2026 and every phrase was verified word for word against the story before counting. The Roman spellings in Assignment 01 follow commonly seen forms and are not standardised. Assignment 04 describes the design of a skill and does not report a test of its accuracy.</p>
           </details>
         </section>
 
@@ -427,8 +429,14 @@
             <h2 id="sources-heading">Sources and acknowledgements</h2>
           </div>
           <ul class="citation-list">
-            <li>[EDIT: Author. <em>Title.</em> Publisher, year. URL if applicable.]</li>
-            <li>[EDIT: Image, archive, dataset, or tool credit.]</li>
+            <li>Dutt, T. <em>Ancient Ballads and Legends of Hindustan.</em> Project Gutenberg. <a href="https://www.gutenberg.org/cache/epub/23245/pg23245-images.html">https://www.gutenberg.org/cache/epub/23245/pg23245-images.html</a></li>
+            <li>Tagore, R. <em>Glimpses of Bengal.</em> Project Gutenberg. <a href="https://www.gutenberg.org/cache/epub/7951/pg7951-images.html">https://www.gutenberg.org/cache/epub/7951/pg7951-images.html</a></li>
+            <li>Ramakrishna Pillai, T. <em>Tales of Ind, and Other Poems.</em> Project Gutenberg. <a href="https://www.gutenberg.org/cache/epub/11096/pg11096-images.html">https://www.gutenberg.org/cache/epub/11096/pg11096-images.html</a></li>
+            <li>Naidu, S. <em>The Golden Threshold.</em> Project Gutenberg. <a href="https://www.gutenberg.org/cache/epub/680/pg680-images.html">https://www.gutenberg.org/cache/epub/680/pg680-images.html</a></li>
+            <li>Chatterjee, B. C. <em>The Poison Tree: A Tale of Hindu Life in Bengal</em> (M. S. Knight, Trans.). Project Gutenberg. <a href="https://www.gutenberg.org/cache/epub/17455/pg17455-images.html">https://www.gutenberg.org/cache/epub/17455/pg17455-images.html</a></li>
+            <li>Kalidasa. <em>Sakoontala; or, The Lost Ring: An Indian Drama</em> (M. Monier-Williams, Trans.). Project Gutenberg. <a href="https://www.gutenberg.org/cache/epub/12169/pg12169-images.html">https://www.gutenberg.org/cache/epub/12169/pg12169-images.html</a></li>
+            <li>Henry, O. (1905). <em>The Gift of the Magi.</em> Project Gutenberg. <a href="https://www.gutenberg.org/cache/epub/7256/pg7256-images.html">https://www.gutenberg.org/cache/epub/7256/pg7256-images.html</a></li>
+            <li><a href="https://docs.github.com/en/pages">GitHub Pages Documentation</a>: Website Publishing and Hosting.</li>
           </ul>
         </section>
       </main>
